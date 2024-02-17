@@ -20,6 +20,9 @@ connectMongoDB("mongodb://127.0.0.1:27017/youtube-app-1").then(() => console.log
 
    app.use(logReqRes("log.txt"));
 
+// Serve static files from the 'public' directory
+   app.use(express.static("views"));
+
 
 // Routes
 app.use("/user",userRouter)

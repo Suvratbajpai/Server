@@ -102,3 +102,77 @@
 1708141601387: ::1: DELETE: /user/65d02be6937696a88bcd6280
 
 1708141608182: ::1: GET: /user/
+
+1708142866480: ::1: GET: /index.html
+
+1708142956603: ::1: GET: /index.html
+
+1708143245965: ::1: GET: /index.html
+
+1708143245978: ::1: GET: /styles.css
+
+1708143245978: ::1: GET: /script.js
+
+1708143290988: ::1: GET: /index.html
+
+1708143291004: ::1: GET: /style.css
+
+1708143291005: ::1: GET: /script.js
+
+1708143339175: ::1: GET: /index.html
+
+1708143339185: ::1: GET: /style.css
+
+1708143339185: ::1: GET: /script.js
+
+1708143525935: ::1: GET: /index.html
+
+1708143525949: ::1: GET: /styles.css
+
+1708143525949: ::1: GET: /script.js
+
+1708143543155: ::1: GET: /index.html
+
+1708143543163: ::1: GET: /style.css
+
+1708143543164: ::1: GET: /script.js
+
+1708143997870: ::1: GET: /index.html
+
+1708143997884: ::1: GET: /animations.css
+
+1708143997884: ::1: GET: /style.css
+
+1708143997885: ::1: GET: /script.js
+
+1708143999999: ::1: GET: /index.html
+
+1708144000009: ::1: GET: /style.css
+
+1708144000010: ::1: GET: /animations.css
+
+1708144000011: ::1: GET: /script.js
+
+1708144015183: ::1: GET: /index.html
+
+1708144015196: ::1: GET: /style.css
+
+1708144015197: ::1: GET: /animations.css
+
+1708144015198: ::1: GET: /script.js
+
+1708144269188: ::1: GET: /index.html
+
+1708144269204: ::1: GET: /style.css
+
+1708144269204: ::1: GET: /animations.css
+
+1708144269205: ::1: GET: /script.js
+
+1708144429933: ::1: GET: /index.html
+
+1708144429946: ::1: GET: /style.css
+
+1708144429946: ::1: GET: /animations.css
+
+1708144429947: ::1: GET: /script.js
