@@ -1,37 +1,28 @@
 let transmissionLog = [];
 
 function startTransmission() {
-    const packet = document.querySelector('.sender .packet');
-    const ack = document.querySelector('.sender .ack');
-    const receiverPacket = document.querySelector('.receiver .packet');
+    const clientPacket = document.querySelector('.client .packet');
+    const serverPacket = document.querySelector('.server .packet');
+    const serverAck = document.querySelector('.server .ack');
 
-    // Packet sending animation
-    packet.style.animationName = 'sendPacket';
-    packet.style.animationDuration = '2s';
-    packet.style.animationTimingFunction = 'linear';
-    packet.style.animationIterationCount = 'infinite';
+    // Client packet animation
+    clientPacket.style.bottom = '100px';
 
-    // Acknowledgment animation
-    ack.style.display = 'block';
-    ack.style.animationName = 'acknowledgePacket';
-    ack.style.animationDuration = '2s';
-    ack.style.animationTimingFunction = 'linear';
-    ack.style.animationIterationCount = 'infinite';
+    // Server packet animation
+    serverPacket.style.bottom = '100px';
 
-    // Packet receiving animation
+    // Server acknowledgment animation
     setTimeout(() => {
-        receiverPacket.style.animationName = 'receivePacket';
-        receiverPacket.style.animationDuration = '2s';
-        receiverPacket.style.animationTimingFunction = 'linear';
-        receiverPacket.style.animationIterationCount = 'infinite';
+        serverAck.style.display = 'block';
+        serverAck.style.top = '100px';
     }, 1000);
 
     // Update transmission log
     const transmissionDetails = {
         type: 'Transmission',
         time: new Date().toLocaleTimeString(),
-        packet: 'Packet Transferred',
-        ack: 'Acknowledgment Received'
+        packet: 'Packet Transferred from Client to Server',
+        ack: 'Acknowledgment Received at Server'
     };
     transmissionLog.push(transmissionDetails);
 
@@ -40,14 +31,13 @@ function startTransmission() {
 }
 
 function stopTransmission() {
-    const packet = document.querySelector('.sender .packet');
-    const ack = document.querySelector('.sender .ack');
-    const receiverPacket = document.querySelector('.receiver .packet');
+    const serverPacket = document.querySelector('.server .packet');
+    const serverAck = document.querySelector('.server .ack');
 
     // Clear animations
-    packet.style.animationName = '';
-    ack.style.animationName = '';
-    receiverPacket.style.animationName = '';
+    serverPacket.style.bottom = '0';
+    serverAck.style.display = 'none';
+    serverAck.style.top = '-25px';
 
     // Clear transmission log
     transmissionLog = [];
@@ -63,7 +53,7 @@ function updateDetails() {
     transmissionLog.forEach(transmission => {
         const logElement = document.createElement('div');
         logElement.innerHTML = `
-            <strong>${transmission.type}</strong>-<br>
+            <strong>${transmission.type}</strong> - ${transmission.time}<br>
             ${transmission.packet}<br>
             ${transmission.ack}<br><br>
         `;
